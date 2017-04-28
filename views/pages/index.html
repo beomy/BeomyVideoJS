@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="stuff, to, help, search, engines, not" name="keywords">
+    <meta content="What this page is about." name="description">
+    <meta content="Display Webcam Stream" name="title">
+    <link rel="stylesheet" type="text/css" href="../../public/stylesheets/style.css">
+    <script type="text/javascript" src="../../public/javascripts/beomy-video.js"></script>
+    <title>Display Webcam Stream</title>  
+</head>
+<body>
+    <h1>Noel Camera</h1>
+    <div id="container">
+        <section class="original-video-area">
+            <div>
+                <video id="video-element"></video>
+            </div>
+            <div>
+                <button id="play-video-btn">play</button>
+                <button id="pause-video-btn">pause</button>
+                <button id="stop-video-btn">stop</button>
+            </div>
+        </section>
+        <section class="convert-video-area">
+            <div>
+                <canvas id="edge-video"></canvas>
+            </div>
+            <div>
+                <button id="play-edge-btn">play</button>
+                <button id="stop-edge-btn">stop</button>
+            </div>
+        </section>
+        <section class="convert-video-area">
+            <div>
+                <canvas id="gray-video"></canvas>
+            </div>
+            <div>
+                <button id="play-gray-btn">play</button>
+                <button id="stop-gray-btn">stop</button>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        var videoManager = new VideoManager("#video-element");
+        // videoManager.playWebCam();
+        videoManager.convertGrayVideo("#gray-video");
+        videoManager.edgeDetection("#edge-video", "robert");
+
+        document.querySelector("#pause-video-btn").addEventListener("click", function () {
+            videoManager.pauseWebCam();
+        });
+
+        document.querySelector("#play-video-btn").addEventListener("click", function () {
+            videoManager.playWebCam();
+        });
+
+        document.querySelector("#stop-video-btn").addEventListener("click", function () {
+            videoManager.stopWebCam();
+        });
+
+        document.querySelector("#play-edge-btn").addEventListener("click", function () {
+            videoManager.convertStart("#edge-video");
+        });
+
+        document.querySelector("#stop-edge-btn").addEventListener("click", function () {
+            videoManager.convertStop("#edge-video");
+        });
+
+        document.querySelector("#play-gray-btn").addEventListener("click", function () {
+            videoManager.convertStart("#gray-video");
+        });
+
+        document.querySelector("#stop-gray-btn").addEventListener("click", function () {
+            videoManager.convertStop("#gray-video");
+        });
+    </script>
+</body>
+</html>

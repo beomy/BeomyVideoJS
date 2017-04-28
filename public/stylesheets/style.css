@@ -1,0 +1,8 @@
+#video-element {
+    width: 500px;
+    height: 375px;
+    background-color: #666;
+}
+.original-video-area, .convert-video-area {
+    display: inline-block;
+}

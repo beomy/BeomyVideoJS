@@ -1,39 +1,9 @@
-# node-js-getting-started
+## BeomyVideoJS
 
-A barebones Node.js app using [Express 4](http://expressjs.com/).
+Video 태그를 공부하기 위해 시작된 코드입니다.
 
-This application supports the [Getting Started with Node on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
+html 파일 실행시, 카메라를 읽어오지 못하는 문제가 있어, localhost로 동작시키기 위해 Node.js의 Express 위에 올린 예제 입니다.
 
-## Running Locally
+npm을 설치 하시고, npm start를 통해 예제를 실행 할 수 있습니다.
 
-Make sure you have [Node.js](http://nodejs.org/) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
-
-```sh
-$ git clone git@github.com:heroku/node-js-getting-started.git # or clone your own fork
-$ cd node-js-getting-started
-$ npm install
-$ npm start
-```
-
-Your app should now be running on [localhost:5000](http://localhost:5000/).
-
-## Deploying to Heroku
-
-```
-$ heroku create
-$ git push heroku master
-$ heroku open
-```
-or
-
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-## Documentation
-
-For more information about using Node.js on Heroku, see these Dev Center articles:
-
-- [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
-- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
-- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
-- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
-- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
+현재 웹캠으로 Video Play, Gray Convert, Edge Detection 을 제공하고 있습니다.
